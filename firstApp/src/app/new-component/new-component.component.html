@@ -1,1 +1,16 @@
 <p>new-component works!</p>
+
+<h1>{{title}}</h1>
+<div class="h1">{{5+5+5}}</div>
+
+<h3>{{myfun()}}</h3>
+
+<input  [class.form-control]="IsActive" type="text" value={{inputvalue}}/>
+<input type="text" [value]="inputvalue" [style.margin]='"5px"'/>
+<input type="text" [value]=inputvalue ngClass=form-control/>
+<input type="text" bind-value=inputvalue [ngClass]="IsActive?'form-control':'my-4'"/>
+
+<input type="text" value={{inputvalue}} disabled="false"/>
+<input type="text" value={{inputvalue}} disabled=false/>
+<input type="text" value={{inputvalue}} [disabled]="false"/>
+<input type="text" value={{inputvalue}} disabled={{false}}/>

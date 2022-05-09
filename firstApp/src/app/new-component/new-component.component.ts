@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponentComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  inputvalue:string="input Value method"
+  IsActive:boolean = true
+  constructor() { 
+   
   }
 
+  ngOnInit(): void {
+    
+  }
+  title:string = "new Comonent"
+  myfun(){
+    return "myfun calling "+this.title+" from new Comopnent"
+  }
 }
