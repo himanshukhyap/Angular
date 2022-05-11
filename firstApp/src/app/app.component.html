@@ -1,12 +1,13 @@
-<div class="container">
-  <app-new-component></app-new-component>
-  <!-- <h1>{{title}}</h1> -->
-</div>
-
-<div *ngIf="message;">
+<div class="shadow"><div *ngIf="message;">
   <h1>{{ message.notification.title }}</h1>
   <h2>{{ message.notification.body }}</h2>
 </div>
 <div *ngIf="!message;">
   No Message Arrived
+</div></div>
+<br><br>
+
+<div class="container">
+ 
+  <router-outlet></router-outlet>
 </div>

@@ -31,26 +31,17 @@ export class NewComponentComponent implements OnInit {
 
   }
   input2:string=""
-
-  // Import the functions you need from the SDKs you need
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-//  firebaseConfig = {
-//   apiKey: "AIzaSyAQv7D7-MT24rTmdArpOz10LfQ2vKeBmKA",
-//   authDomain: "demofilebase-a876e.firebaseapp.com",
-//   projectId: "demofilebase-a876e",
-//   storageBucket: "demofilebase-a876e.appspot.com",
-//   messagingSenderId: "93515060687",
-//   appId: "1:93515060687:web:e7c78856267518c66b2eba",
-//   measurementId: "G-2TV60GD5Q1"
-// };
-
-// // Initialize Firebase
-//  app = initializeApp(this.firebaseConfig);
-//  analytics = getAnalytics(this.app);
+  isValid:boolean=true
+  click(){
+    this.isValid=!this.isValid;
+  }
+  selectednum:string=""
+  getvalue(event:any, selectvalue:any){
+    console.log(event.target.value)
+    console.log(selectvalue.value)
+    this.selectednum = selectvalue.value;
+  }
+   cars = ["Saab", "Volvo", "BMW"];
+ 
  }
 

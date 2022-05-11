@@ -20,5 +20,42 @@
 
 <br><br>
 <input type="text" [(ngModel)]="input2"/>
-<p>{{input2}}</p> -->
+<p>{{input2}}</p>
+ -->
+
+<!-- <button (click)="click()">Toggel</button>
+<div *ngIf="isValid; then trueBlock else elseblock"></div>
+
+<ng-template #trueBlock>
+    <span>I Am True Block</span>
+</ng-template>
+<ng-template #elseblock>
+    <span>I am Else Block</span>
+</ng-template>
+<br><br>
+<div *ngIf="isValid;else elseblock"><span>I Am True Block</span></div>
+<br><br>
+{{isValid? <h1>I Am True Block</h1>:<h1>I am Else block</h1> }}
+<br><br> -->
+<!-- <div class="shadow w-50">
+<select class="form-select form-select-sm my-2" #selectvalue aria-label="Default select example"(change)="getvalue($event,selectvalue)">
+    <option selected [ngSwitch]="selectednum">Open this select menu</option>
+    <option  value="1">One</option>
+    <option  value="2">Two</option>
+    <option  value="3">Three</option>
+  </select>
+  <div [ngSwitch]="selectednum">
+    <div *ngSwitchCase="'1'">1</div>
+    <div *ngSwitchCase="'2'">2</div>
+    <div *ngSwitchCase="'3'">3</div>
+    <div *ngSwitchDefault>select any Num.</div>
+</div>
+</div> -->
+
+<div *ngFor="let item of cars">
+<li>{{item}}</li>
+</div>
+
+
+
 
