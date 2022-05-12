@@ -9,12 +9,14 @@ import { NewComponentComponent } from './new-component/new-component.component';
 import { environment } from "../environments/environment";
 import { initializeApp } from "firebase/app";
 import { AboutPageComponent } from './about-page/about-page.component';
+import { HeaderComponent } from './header/header.component';
 initializeApp(environment.firebase);
 @NgModule({
   declarations: [
     AppComponent,
     NewComponentComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
