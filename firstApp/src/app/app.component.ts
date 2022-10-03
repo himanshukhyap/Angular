@@ -8,36 +8,19 @@ import { getMessaging, getToken, onMessage } from "firebase/messaging";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  inputdata:any;
+  title = "Welcome to First Angular App";
+ 
+  getusername=(username:any)=>{
+    return username
+  }
 
-  title = 'af-notification';
-  message:any = null;
-  constructor() {}
-  ngOnInit(): void {
-    this.requestPermission();
-    this.listen();
+  getinput=(event:any)=>{
+    this.inputdata = event.target.value;
   }
-  requestPermission() {
-    const messaging = getMessaging();
-    getToken(messaging, 
-     { vapidKey: environment.firebase.vapidKey}).then(
-       (currentToken) => {
-         if (currentToken) {
-           console.log("Hurraaa!!! we got the token.....");
-           console.log(currentToken);
-         } else {
-           console.log('No registration token available. Request permission to generate one.');
-         }
-     }).catch((err) => {
-        console.log('An error occurred while retrieving token. ', err);
-    });
+  getinputbyID=(value:any)=>{
+    this.inputdata = value
   }
-  listen() {
-    const messaging = getMessaging();
-    onMessage(messaging, (payload) => {
-      console.log('Message received. ', payload);
-      this.message=payload;
-    });
-  }
-   
+
  
 }

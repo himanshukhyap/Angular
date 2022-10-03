@@ -1,18 +1,15 @@
-<app-header></app-header>
+
 <div class="container">
  
-  <div class="shadow">
-    <div *ngIf="message;">
-      <h1>{{ message.notification.title }}</h1>
-      <h2>{{ message.notification.body }}</h2>
-    </div>
-    <div *ngIf="!message;">
-      No Message Arrived
-    </div>
-  </div>
-  <br><br>
+  {{title}}
+  {{getusername("Himanshu Kashyap")}}
+  <br/>
+<input type="text"  (change)="getinput($event)"/>
+<input type="text" id="#input1" (keyup)="getinput($event)"/>
+<p>{{inputdata}}</p>
+  <app-about></app-about>
+  <app-task></app-task>
 </div>
-
 
 
 
